@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: rgb(213, 194, 70);
+  font-family: sans-serif;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  text-align: center;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.content {
+  width: 60%;
+  padding: 20px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30%;
+  background-color: black;
+  padding: 10px;
+}
+
+.features {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+
+.feature {
+  position: absolute;
+  top: 40px;
+  width: 30%;
+  background-color: black;
+  padding: 10px;
+}
+
+.features div:nth-of-type(1) {
+  left: 2%;
+}
+
+.features div:nth-of-type(2) {
+  left: 35%;
+}
+
+.features div:nth-of-type(3) {
+  left: 68%;
+}
+
+button {
+  background-color: red;
+  color: black;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
