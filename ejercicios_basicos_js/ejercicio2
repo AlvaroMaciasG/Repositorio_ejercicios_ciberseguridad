@@ -1,0 +1,41 @@
+// 1. Luke Skywalker cumple años
+const jedi = { nombre: 'Luke Skywalker', edad: 19 }
+jedi.edad = 25
+
+// 2. Presentación al estilo Leia Organa
+const nombre = 'Leia'
+const apellido = 'Organa'
+const edad = 20
+const mensaje =
+  'Soy ' +
+  nombre +
+  ' ' +
+  apellido +
+  ', tengo ' +
+  edad +
+  ' años y soy una princesa de Alderaan.'
+console.log('Mensaje de Leia', presentacion)
+
+// 3. Calculando el coste total de sables de luz
+const sable1 = { nombre: 'Shoto de Yoda', precio: 1500 }
+const sable2 = { nombre: 'Sable de Darth Vader', precio: 2000 }
+
+const precioTotal = sable1.precio + sable2.precio
+console.log('El precio total es', precioTotalSables)
+
+// 4. Actualizando el precio final de las naves
+let precioBaseGlobal = 10000
+precioBaseGlobal = 25000
+
+const nave1 = { nombre: 'Ala-X', precioBase: 50000, precioFinal: 60000 }
+const nave2 = {
+  nombre: 'Halcón Milenario',
+  precioBase: 70000,
+  precioFinal: 80000
+}
+
+nave1.precioFinal = nave1.precioBase + precioBaseGlobal
+nave2.precioFinal = nave2.precioBase + precioBaseGlobal
+
+console.log('Precio de la nave 1 actualizada:', nave1)
+console.log('Precio de la nave 2 actualizada:', nave2)

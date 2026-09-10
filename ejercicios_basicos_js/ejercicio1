@@ -1,0 +1,12 @@
+const miSuperheroeFavorito = 'Hulk'
+const numeroFavorito = 50
+const altura = 5
+const longitud = 10
+
+const suma = altura + longitud
+
+console.log('Superhéroe:', miSuperheroeFavorito)
+console.log('Número favorito:', numeroFavorito)
+console.log('Altura:', altura)
+console.log('Longitud:', longitud)
+console.log('Suma:', suma)
