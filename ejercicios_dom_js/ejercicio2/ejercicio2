@@ -1,0 +1,47 @@
+const divVacio = document.createElement('div')
+document.body.appendChild(divVacio)
+
+const divConP = document.createElement('div')
+const pVacia = document.createElement('p')
+divConP.appendChild(pVacia)
+document.body.appendChild(divConP)
+
+const divConSeisP = document.createElement('div')
+for (let i = 0; i < 6; i++) {
+  const pBucle = document.createElement('p')
+  divConSeisP.appendChild(pBucle)
+}
+document.body.appendChild(divConSeisP)
+
+const pDinamico = document.createElement('p')
+pDinamico.textContent = 'Soy dinámico!'
+document.body.appendChild(pDinamico)
+
+const h2Texto = document.querySelector('h2.fn-insert-here')
+h2Texto.textContent = 'Wubba Lubba dub dub'
+
+const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter']
+const listaUl = document.createElement('ul')
+for (let i = 0; i < apps.length; i++) {
+  const li = document.createElement('li')
+  li.textContent = apps[i]
+  listaUl.appendChild(li)
+}
+document.body.appendChild(listaUl)
+
+const elementosAEliminar = document.querySelectorAll('.fn-remove-me')
+for (let i = 0; i < elementosAEliminar.length; i++) {
+  elementosAEliminar[i].remove()
+}
+
+const todosLosDivs = document.querySelectorAll('div')
+const pMedio = document.createElement('p')
+pMedio.textContent = 'Voy en medio!'
+document.body.insertBefore(pMedio, todosLosDivs[1])
+
+const divsInsertHere = document.querySelectorAll('div.fn-insert-here')
+for (let i = 0; i < divsInsertHere.length; i++) {
+  const pDentro = document.createElement('p')
+  pDentro.textContent = 'Voy dentro!'
+  divsInsertHere[i].appendChild(pDentro)
+}

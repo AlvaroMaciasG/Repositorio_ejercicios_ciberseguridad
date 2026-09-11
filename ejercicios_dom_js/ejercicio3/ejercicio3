@@ -1,0 +1,71 @@
+const countries = ['Japón', 'Nicaragua', 'Suiza', 'Australia', 'Venezuela']
+const ulCountries = document.createElement('ul')
+
+for (let i = 0; i < countries.length; i++) {
+  const li = document.createElement('li')
+  li.textContent = countries[i]
+  ulCountries.appendChild(li)
+}
+document.body.appendChild(ulCountries)
+
+const removeMe = document.querySelector('.fn-remove-me')
+if (removeMe) {
+  removeMe.remove()
+}
+
+const cars = ['Mazda 6', 'Ford fiesta', 'Audi A4', 'Toyota corola']
+const printHereDiv = document.querySelector('[data-function="printHere"]')
+const ulCars = document.createElement('ul')
+
+for (let i = 0; i < cars.length; i++) {
+  const li = document.createElement('li')
+  li.textContent = cars[i]
+  ulCars.appendChild(li)
+}
+printHereDiv.appendChild(ulCars)
+
+const countriesGallery = [
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1' },
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2' },
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3' },
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4' },
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5' }
+]
+
+for (let i = 0; i < countriesGallery.length; i++) {
+  const div = document.createElement('div')
+  div.className = 'gallery-item'
+
+  const h4 = document.createElement('h4')
+  h4.textContent = countriesGallery[i].title
+
+  const img = document.createElement('img')
+  img.src = countriesGallery[i].imgUrl
+
+  div.appendChild(h4)
+  div.appendChild(img)
+  document.body.appendChild(div)
+}
+
+const removeLastBtn = document.createElement('button')
+removeLastBtn.textContent = 'Eliminar último'
+document.body.appendChild(removeLastBtn)
+
+removeLastBtn.addEventListener('click', function () {
+  const galleryItems = document.querySelectorAll('.gallery-item')
+  if (galleryItems.length > 0) {
+    galleryItems[galleryItems.length - 1].remove()
+  }
+})
+
+const allGalleryItems = document.querySelectorAll('.gallery-item')
+for (let i = 0; i < allGalleryItems.length; i++) {
+  const btnRemoveSelf = document.createElement('button')
+  btnRemoveSelf.textContent = 'Eliminar este elemento'
+
+  btnRemoveSelf.addEventListener('click', function () {
+    allGalleryItems[i].remove()
+  })
+
+  allGalleryItems[i].appendChild(btnRemoveSelf)
+}
